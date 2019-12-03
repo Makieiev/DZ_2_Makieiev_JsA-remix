@@ -1,0 +1,24 @@
+<!-- Добавьте после дива с id=one еще один див с текстом two и id=two
+ На клик по id=two добавьте перед ним див с id - two_first, а див с id=two измените на two_second-->
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 2-6 Макеева Владимира по JsA : Classwork</title>
+</head>
+<body>
+    <div id="one">one</div> 
+    <script>
+     var div1 = document.getElementById("one");
+        div1.insertAdjacentHTML("afterEnd", "<div id='two'>two</div>");
+     var div2 = document.getElementById('two');
+     	div2.onclick = click;
+
+     	function click() {
+        div2.insertAdjacentHTML("beforeBegin", "<div id='two_first'>two_first</div>");
+        div2.id = "two_second";
+        div2.innerHTML = "two_second"
+        }
+    </script>
+</body>
+</html>

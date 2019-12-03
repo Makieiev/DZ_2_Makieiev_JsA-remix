@@ -1,0 +1,44 @@
+<!-- 
+    Перепишите все селекторы из первой папки 001_CSS_Selectors с помощью известных Вам методов и свойств.
+    В примере с классом добавьте к существующем классу, класс с именем newclass, а также выведите в консоль окне все стили что есть у элемента с этим классом
+    В примере с индентификатором добавьте свойства marginTop с значением 10px и background с значением red
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 2-5 Макеева Владимира по JsA : Attr</title>
+    <style>
+       /* a[target] {
+            background-color: #90EE90;
+            font-size: 30px;
+        }
+        a[target=_blank] { 
+            background-color: orange;
+            font-size: 30px;
+}*/
+    </style>
+</head>
+<body>
+
+    <p style="font-size: 40px;">Ссылки с целевым атрибутом получают <span style="color: #90EE90">салатовый</span> цвет фона:</p>
+
+    <a href="#" target="_top">chambarbia_kirkudu.com</a><br/><br/>
+    <a href="http://www.google.com" target="_blank">google.com</a><br/><br/>
+    <a href="http://www.wikipedia.org" target="_blank">wikipedia.org</a><br/><br/>
+    <a href="#" target="_top">mamba-rumba.com</a><br/><br/>
+    <a href="https://www.youtube.com/?gl=UA&hl=ru" target="_blank">youtube.com</a><br/><br/>
+    <a href="https://www.avg.com/ru-ru/" target="_blank">Антивирус AVG</a><br/><br/>
+    <a href="#" target="_top">sysi-pusi.com</a>
+</body>
+<script type="text/javascript">
+    var allA = document.getElementsByTagName('a');
+    for(var i = 0; i < allA.length; i++) {
+        allA[i].style.backgroundColor = 'orange';
+        var myAOr = allA[i].getAttribute('target');
+        if(myAOr == '_blank') {
+           allA[i].style.backgroundColor = ' #90EE90';
+        }
+    }
+</script>
+</html>

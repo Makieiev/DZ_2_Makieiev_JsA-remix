@@ -1,0 +1,61 @@
+<!-- 
+    Перепишите все селекторы из первой папки 001_CSS_Selectors с помощью известных Вам методов и свойств.
+    В примере с классом добавьте к существующем классу, класс с именем newclass, а также выведите в консоль окне все стили что есть у элемента с этим классом
+    В примере с индентификатором добавьте свойства marginTop с значением 10px и background с значением red
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 2-2 Макеева Владимира по JsA : All_elements</title>
+    <style>
+    /**{
+        color: red;
+        text-decoration:  blink;
+    }
+    a {
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: overline;
+    }
+    p {
+        color: #ADFF2F;
+    }
+    
+    p, a {
+        font-size: 20px;
+        text-transform: uppercase;
+
+    }*/
+    </style>
+</head>
+<body>
+    <h1 class="class1" id="id1">Все элементы</h1>
+    <a href="#">Иной элемент</a>
+    <p>c точки зрения банальной эрудиции мы не можем игнорировать тенденции парадоксальных эмоций, так как каждый индивидуум аналитически метафизирует абстракцию</p>
+    <script type="text/javascript">
+        var element = document.querySelectorAll("*");
+        console.dir(element);
+        for(var i = 0; i <  element.length - 1; i++) {
+             element[i].style.textTransform = "uppercase";
+            if(i % 2 == 0){
+             element[i].style.color = "red";
+        } else {
+             element[i].style.color = "#ADFF2F";
+        }
+        }
+        var letA = document.querySelector('a');
+        letA.style.fontStyle = 'italic';
+        letA.style.fontWeight = 'bold';
+        var myClass = document.querySelector('.class1');
+        myClass.classList.add('newClass');
+        myClass.style.color = 'blue';
+        var titleH = document.getElementById('id1');
+        titleH.style.background = 'red';
+        titleH.style.color = 'yellow';
+        titleH.style.marginTop = "10px";
+        titleH.classList.add('newClass');
+        console.log(myClass.style.cssText);    
+    </script>
+</body>
+</html>

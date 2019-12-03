@@ -1,0 +1,46 @@
+<!-- 
+    Перепишите все селекторы из первой папки 001_CSS_Selectors с помощью известных Вам методов и свойств.
+    В примере с классом добавьте к существующем классу, класс с именем newclass, а также выведите в консоль окне все стили что есть у элемента с этим классом
+    В примере с индентификатором добавьте свойства marginTop с значением 10px и background с значением red
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 2-1 Макеева Владимира по JsA : Id and classes</title>
+    <style>
+       /*#id1 {
+            color: yellow;
+            margin-top: 10px;
+            background-color: red;
+
+        }
+        h1.class1 {
+            color: blue;
+            font-size: 30px;
+            
+        }
+        div.newClass{
+            color: green;
+            font-size: 40px;
+        }*/
+    </style>
+</head>
+<body>
+    <h1 class="class1" id="id1">Пример 1 задачи 2-1</h1>
+    <div class="newClass">Задача с селектором ID и Classes </div>
+    <script type="text/javascript">
+            var titleH = document.getElementById('id1');
+            var myDiv = document.querySelector('.newClass');
+            myDiv.style.color = 'blue';
+            myDiv.style.fontSize = '30px';
+            myDiv.style.textDecoration = 'underline';
+            titleH.style.background = 'red';
+            titleH.style.color = 'yellow';
+            titleH.style.marginTop = "10px";
+            myDiv.classList.add('newClass');
+            console.dir(myDiv.style.cssText);
+            console.log(myDiv.classList);
+    </script>
+</body>
+</html>
